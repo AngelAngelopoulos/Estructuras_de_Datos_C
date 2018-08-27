@@ -1,16 +1,19 @@
 
 /*
- * Luis Angel ALvaradojkj
- * Apuntadores
- *
- */
-
-/*
- * File:   main.c
- * Author: angelalvarado
- *
- * Created on 24 de agosto de 2018, 12:12 AM
- */
+* Fecha: 
+*
+* Autor: Luis Angel Alvarado
+* 
+* Versión: 1.0
+*
+* Descripcion de la aplicación: 
+*  
+* Fecha de Revision: 
+*
+* Encargado de revisión: Miguel Angel
+*
+* Materia: Estructuras de datos II
+*/   
 
 #include <stdio.h>
 #include <stdlib.h>
