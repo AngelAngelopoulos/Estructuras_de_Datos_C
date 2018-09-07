@@ -49,15 +49,15 @@ void CreaMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m)
 void mulMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m, int l)
 {	
 	int temp;
-	for (i = 0 ; i < n ; i++ ) //i para las filas de la matriz resultante
+	for (int i = 0 ; i < n ; i++ ) //i para las filas de la matriz resultante
     {
-        for (k = 0 ; k < l ; k++ ) // k para las columnas de la matriz resultante
+        for (int k = 0 ; k < l ; k++ ) // k para las columnas de la matriz resultante
         {
             temp = 0;
-            for (j = 0 ; j < m; j++ ) //j para realizar la multiplicacion de 
+            for (int j = 0 ; j < m; j++ ) //j para realizar la multiplicacion de 
                     {                                   //los elementos   de la matriz
-                temporal += mat[i][j] * mat2[j][k];
-                resultado[i][k] = temporal;
+                temp += matriz1[i][j] * matriz2[j][k];
+                matrizRes[i][k] = temp;
             }
             }
     }
@@ -77,7 +77,7 @@ void impMatrx(int matrizg[], int cols, int rens)
 
 int pideNum()
 {
-	res = 0;
+	int res = 0;
 	printf("Ingrese el numero de renglones/columnas");
 	scanf("%d", res);
 	return (res);
