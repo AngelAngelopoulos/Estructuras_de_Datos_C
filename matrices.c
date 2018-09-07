@@ -5,9 +5,9 @@
 #define TAMX 20
 #define TAMY 20
 
-void CreaMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m);
-void mulMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m, int l);
-void impMatrx(int matrizg[], int cols, int rens);
+void CreaMatrix(int matriz1[][], int matriz2[][] int matrizRes[][] int n, int m);
+void mulMatrix(int matriz1[][], int matriz2[][], int matrizRes[][], int n, int m, int l);
+void impMatrx(int matrizg[][], int cols, int rens);
 int pideNum();
 
 int main()
@@ -15,9 +15,9 @@ int main()
 	int matriz1[TAMX][TAMY], matriz2[TAMX][TAMY], matrizRes[TAMX][TAMY], n, m1, m2,  l;
 
 	n = pideNum();
-	m = pideNum();
 	m1 = pideNum();
 	m2 = pideNum();
+	l = pideNum();
 
 	if (m1 == m2){
 		CreaMatrix(matriz1, matriz2, matrizRes, n, l);
@@ -35,18 +35,18 @@ int main()
 
 }
 
-void CreaMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m)
+void CreaMatrix(int matriz1[][], int matriz2[][], int matrizRes[][], int n, int m)
 {
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
 		{
-			matriz1[i][j] = matriz2[i][j] = matrizRes[i][j];
+			matriz1[i][j] = matriz2[i][j] = matrizRes[i][j] rand()%10;
 		}
 	}
 }
 
-void mulMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m, int l)
+void mulMatrix(int matriz1[][], int matriz2[][], int matrizRes[][], int n, int m, int l)
 {	
 	int temp;
 	for (int i = 0 ; i < n ; i++ ) //i para las filas de la matriz resultante
@@ -63,7 +63,7 @@ void mulMatrix(int matriz1[], int matriz2[], int matrizRes[], int n, int m, int 
     }
 }
 
-void impMatrx(int matrizg[], int cols, int rens)
+void impMatrx(int matrizg[][], int cols, int rens)
 {
 	for (int i = 0; i < cols; ++i)
 	{
@@ -79,7 +79,7 @@ int pideNum()
 {
 	int res = 0;
 	printf("Ingrese el numero de renglones/columnas");
-	scanf("%d", res);
+	scanf("%d", &res);
 	return (res);
 }
 
